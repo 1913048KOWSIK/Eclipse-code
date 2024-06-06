@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="MySuite">
+	<test name="MyTest">
+		<groups>
+			<run>
+				<exclude name = "payment"></exclude>
+			
+			</run>
+		
+		</groups>
+		<classes>
+			<class name = "TestNG.groupingMethods" />
+		</classes>
+	</test>
+</suite>
+
+
+
+

@@ -1,0 +1,25 @@
+package practice;
+
+public class practice {
+	
+	public static float adding(float a , float b) {
+		 float c = a + b;
+		 return c;
+		
+		
+}
+	public static int divide (int i , int j) {
+		int k = i+j;
+		return k;
+		
+	}
+	public static void main(String[] args) {
+		int num1  = 10;
+		int num2 = 20;
+		practice obj = new practice();
+		float x = obj.adding(num1, num2);
+		int y = obj.divide(num1, num2);
+		System.out.println(x);
+		System.out.println(y);
+	}
+}

@@ -1,0 +1,19 @@
+package practice;
+
+public class instance_Method {
+	int s;
+	int i = 10;
+	int j = 20;
+
+	public static void main(String[] args) {
+		
+		instance_Method obj = new instance_Method();
+		System.out.println("The value of :");
+	}
+	public int add (int a, int b) {
+		
+		s = i+j;
+		return s;
+	}
+
+}

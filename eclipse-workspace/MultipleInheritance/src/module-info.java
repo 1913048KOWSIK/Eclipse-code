@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Kowshik
+ *
+ */
+module MultipleInheritance {
+}

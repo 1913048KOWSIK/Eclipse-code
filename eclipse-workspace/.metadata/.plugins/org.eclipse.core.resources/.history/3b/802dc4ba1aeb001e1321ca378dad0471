@@ -1,0 +1,15 @@
+package practice;
+
+public class wrapperByte {
+
+	public static void main(String[] args) {
+	
+	 Byte a = 100;
+	 Byte b = 101;
+	Byte sum = (byte) (a+b);
+	 System.out.println(sum);
+	
+	
+	}
+
+}

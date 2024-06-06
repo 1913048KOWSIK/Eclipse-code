@@ -1,0 +1,8 @@
+package Apartment.com;
+
+import org.openqa.selenium.WebElement;
+
+public class apartmentPageFindElements {
+
+	public static WebElement 
+}

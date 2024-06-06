@@ -1,0 +1,51 @@
+package Apartment.com;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class AutomationScript {
+
+	WebDriver driver;
+
+	@BeforeTest
+	public void OpenBrowser() {
+		System.setProperty("webdriver.edge.driver", "C:\\Users\\Kowshik\\Music\\driver\\edgedriver_win64 (1)\\msedgedriver.exe");
+		driver = new EdgeDriver();
+		driver.manage().window().maximize();
+
+		driver.get("https://www.apartments.com/");
+	}
+	@Test(priority = 0)
+	public void search() {
+		WebElement search = driver.findElement(By.id("quickSearchLookup"));
+		search.click();
+		search.sendKeys("cochituate,MA");
+		driver.findElement(By.xpath("//button[@class='go btn btn-lg btn-primary']")).click();
+	}
+
+	@Test(priority = 1)
+	public void insideSearch() throws InterruptedException {
+		Thread.sleep(3000);
+		WebElement sTab = driver.findElement(By.id("searchBarLookup"));
+		sTab.click();
+		sTab.sendKeys("cochituate,MA" + Keys.ENTER);
+	}
+
+	@Test(priority = 2)
+	public void select() throws InterruptedException {
+		Thread.sleep(3000);
+		WebElement choose = driver.findElement(By.xpath("//*[@id='placardContainer']/ul/li[3]/article/section/div/div[1]/div[2]/a/div/div/div[1]/div/div/img/following::div[3]/a/div/following::div[1]/a"));
+		choose.click();
+	}
+
+	@Test(priority = 3)
+	public void photoOfTheHouse() {
+		WebElement photo = driver.findElement(By.xpath("//*[@id='carouselSection']/div[2]/div/ul/li[1]/div/div/div/div"));
+		photo.click();
+	}
+}

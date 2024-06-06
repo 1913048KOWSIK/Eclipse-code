@@ -1,0 +1,20 @@
+package comm.onesoft.day1;
+
+public class addition {
+	public static void main(String[] args) {
+		float num1 = 25.4f;
+		float num2 = 36.25f;
+		float total1 = num1 + num2;
+		double num3 = 236.546d;
+		double num4 = 983.4587d;
+		double total2 = num3 + num4;
+		long num5 = 648755l;
+		long num6 = 5544566l;
+		long total3 = num5 + num6;
+		System.out.println("the values are :" + total1);
+		System.out.println("the values are :" + total2);
+		System.out.println("the values are :" + total3);
+
+	}
+
+}

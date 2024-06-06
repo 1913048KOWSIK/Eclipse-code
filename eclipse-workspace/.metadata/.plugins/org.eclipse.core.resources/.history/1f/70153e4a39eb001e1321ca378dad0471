@@ -1,0 +1,13 @@
+package practice;
+
+public class SimpleCondtion {
+	
+	SimpleCondtion (){
+		System.out.println("kowsik");
+	}
+	public static void main(String[] args) {
+
+		SimpleCondtion s = new SimpleCondtion();
+	}
+
+}

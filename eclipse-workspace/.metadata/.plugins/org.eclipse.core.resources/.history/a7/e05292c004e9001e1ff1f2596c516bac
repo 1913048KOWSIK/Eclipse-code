@@ -1,0 +1,15 @@
+package practice;
+
+public class whileLoop {
+
+	public static void main(String[] args) {
+		char ch = 'K';
+		while(ch <='T') {
+			
+			System.out.println(ch);
+			ch++;
+		}
+
+	}
+
+}

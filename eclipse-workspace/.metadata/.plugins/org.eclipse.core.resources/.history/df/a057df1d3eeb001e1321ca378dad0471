@@ -1,0 +1,15 @@
+package practice;
+
+public class SimpleCondtion {
+	
+	int i;
+	String name;
+	
+	public static void main(String[] args) {
+
+		SimpleCondtion s = new SimpleCondtion();
+		SimpleCondtion s2 = new SimpleCondtion();
+		s.display
+	}
+
+}

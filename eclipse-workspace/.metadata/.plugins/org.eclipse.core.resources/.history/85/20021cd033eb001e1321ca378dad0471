@@ -1,0 +1,9 @@
+package practice;
+
+public class SimpleCondtion {
+
+	public static void main(String[] args) {
+
+	}
+
+}

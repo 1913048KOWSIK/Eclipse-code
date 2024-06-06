@@ -1,0 +1,15 @@
+package working;
+
+public class kowsik {
+	int a = 10;
+	int b = 20;
+
+
+class shal{
+	int c = a + b;
+}
+public static void main(String[] args) {
+	shal  = new shal();
+	
+}
+}

@@ -1,0 +1,18 @@
+package practice;
+
+public class defaultConstructor {
+
+	int a;
+	String name;
+	public static void main(String[] args) {
+	
+		defaultConstructor obj = new defaultConstructor();
+		defaultConstructor obj2 = new defaultConstructor();
+		obj.display();
+		obj2.display();
+	}
+	void display() {
+		System.out.println(a + name);
+	}
+
+}

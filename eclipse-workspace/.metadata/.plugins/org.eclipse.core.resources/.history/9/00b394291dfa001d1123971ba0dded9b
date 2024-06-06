@@ -1,0 +1,28 @@
+package comm.onesoft.day1;
+
+public class Subraction {
+	public static void main(String[] args) {
+		int num1 = 485;
+		int num2 = 466;
+		int total1 = num1 + num2;
+
+		long num3 = 4656666l;
+		long num4 = 1446466;
+		long total2 = num3 + num4;
+
+		float num5 = 66.25f;
+		float num6 = 26.2f;
+		float total3 = num5 + num6;
+
+		double num7 = 66.4665d;
+		double num8 = 635.5665d;
+		double total4 = num7 + num8;
+
+		System.out.println("the value of int are ;" + total1);
+		System.out.println("the value of long are ;" + total2);
+		System.out.println("the value of float are ;" + total3);
+		System.out.println("the value of double are ;" + total4);
+
+	}
+
+}

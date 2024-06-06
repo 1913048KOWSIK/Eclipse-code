@@ -1,0 +1,25 @@
+package practice;
+
+import java.util.Scanner;
+
+public class elseIf {
+
+	public static void main(String[] args) {
+
+		int a;
+		System.out.println("Enter the number");
+		Scanner sc = new Scanner(System.in);
+		a = sc.nextInt();
+		
+		if( a == 80) {
+			System.out.println("Valid");
+	}
+		else if(a<=20){
+			System.out.println("Inalid");
+		}else {
+			System.out.println("Not executed");
+		}
+	}}
+		
+	
+

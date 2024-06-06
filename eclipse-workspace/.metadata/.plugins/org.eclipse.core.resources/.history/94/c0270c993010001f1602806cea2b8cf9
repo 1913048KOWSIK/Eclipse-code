@@ -1,0 +1,87 @@
+package Goibibo;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class AutomationScript {
+
+	WebDriver driver; 
+
+	@BeforeSuite
+	public void grtURl() {
+		System.setProperty("webdriver.edge.driver","C:\\Users\\Kowshik\\Music\\Web Driver\\msedgedriver.exe");
+		driver = new EdgeDriver();
+		driver.manage().window().maximize();
+
+		driver.get("https://www.goibibo.com/");
+
+
+	}
+	@Test(priority = 0)
+	public void cancel() {
+		driver.findElement(By.xpath("//span[@class='logSprite icClose']")).click();
+	}
+
+	@Test(priority = 1)
+	public void Bus() {
+		driver.findElement(By.xpath("//span[@class='sc-1f95z5i-4 drxYQA'][text()='Bus']")).click();
+	}
+
+	@Test(priority = 2)
+	public void from() throws InterruptedException {
+		WebElement from = driver.findElement(By.name("autosuggestBusSRPSrcHomeName"));
+		from.sendKeys("bhavani");
+		
+		Thread.sleep(4000);
+		
+		List<WebElement> lists = driver.findElements(By.xpath("//div[@id='downshift-1-menu']/div/li"));
+		System.out.println("The total lists for from :" + lists.size());
+		
+		for (WebElement webElement : lists) {
+			if(webElement.getText().equals("Bhavani, Tamil Nadu"));
+			webElement.click();
+			break;
+		}
+	}
+	
+	@Test(priority = 3)
+	public void to() throws InterruptedException {
+		WebElement to = driver.findElement(By.name("autosuggest"));
+		to.sendKeys("sollinganallur");
+		
+		Thread.sleep(4000);
+		
+		List<WebElement> toList = driver.findElements(By.xpath("//div[@id='downshift-2-menu']//div/li"));
+		System.out.println("the total list for to :" + toList.size());
+		
+		for (WebElement webElement : toList) {
+			if(webElement.getText().equals("Sholinganallur, Chennai"));
+			webElement.click();
+			break;
+		}
+	}
+	
+	@Test(priority = 4)
+	public void searchBus() {
+		WebElement search = driver.findElement(By.xpath("//div[@class='SearchWidgetstyles__ButtonWrap-sc-1mr4hwz-7 bXLXuO']/child::*"));
+		search.click();
+	}
+	
+	@Test(priority = 5)
+	public void selectButton() {
+		WebElement button = driver.findElement(By.xpath("//*[@id='//*[@id="srpCardLayoutinner"]/div[4]/div[1]/div[2]/div[4]/div/div[2]/div/div[2]/button/div/spansrpCardLayoutinner']/div[4]/div[1]/div[2]/div[4]/div/div[2]/div/div[2]/button/div/span"));
+		button.click();
+	}
+	
+	/*@Test(priority = 6)
+	public void selectSeat() {
+		WebElement seat = driver.findElement(By.xpath("//*[@id='seatSectionredbusnew5000632048803272022']/div/section[2]/section/div[2]/div[3]/aside[2]/div/div[1]/div/svg/g/path[1]"));
+		seat.click();
+	}*/
+}
